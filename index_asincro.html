@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asincronico </title>
+</head>
+<body>
+    <h1>POO</h1>
+
+    <script>
+        // superclass - plantilla
+        class Libro {
+            constructor(nombre, autor,editorial,genero){
+            this.nombre = nombre;
+            this.autor = autor;
+            this.editorial = editorial;
+            this.genero = genero;
+        }   
+        //retornar libros con los atributos de estos 
+        mostrarlibro(){
+            const muestra = (`{this.nombre} - {this.autor} - 
+            {this.editorial} - {this.genero} - `)  //CON ``  
+            return muestra
+        }
+    }
+    //crear 3 objetos tipo libro - invocar metodo de c/u
+    let l1 = new Libro('niunlibro','nadie','exinta','filosofia' );
+    let l2 = new Libro('tolken','alguien','silla','fantasia' );
+    let l3 = new Libro('papelicho y el marciano','marcela paz','panini','infantil' );
+
+    //arrays libros
+    const libros = [l1,l2,l3];
+    
+    //filtrar libros
+    function filtrarPorAutor(Libro, autor){  //Libro.autor
+        let filtro=[];
+        for(libros of Libro){
+            if(libro.autor == autor){
+                filtro.push(libro)          //se quiere el libro
+            } 
+        }
+        return filtro;
+    }
+    
+
+</script>
+
+
+    
+</body>
+</html>
